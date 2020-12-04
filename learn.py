@@ -243,7 +243,35 @@ print("Name: ", p.hyphenated_name())
 # Protocols are like Java interfaces but they are not explicitly defined in
 #   source code. Equivlent to equals(), hashcode() and toString() in Java.
 
-
+# The most basic unit of source code organization in Python is the module,
+#   which is just a .py file with Python code in it.
 # Packages are similar to Java except there must an initializer file named
 #   __init__.py (can be empty) which is executed when the package is last_first
 #   imported
+
+
+# Import Example
+# model/order.py contains class:
+# class SellOrder(object):
+# ...
+# ...
+#
+# import model
+# sell_order = model.order.SellOrder()
+#
+# import model.order
+# sell_order = order.SellOrder()
+#
+# from model.order import SellOrder
+# sell_order = SellOrder()
+#
+# Rename imports
+# from model.order import TYPES as ORDER_TYPES
+#
+# All top-level statements in an imported module will be execute upon import.
+# Library modules probably should not have top-level statements unless
+#   you check for the __main__ namespace.
+
+# Namesapce
+# the entry point of your application (typically, the script that is executed
+#   by Python) is assigned the namespace __main__
